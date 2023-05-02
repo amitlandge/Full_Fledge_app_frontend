@@ -1,0 +1,50 @@
+.form_controls {
+  width: 40%;
+  background-color: dimgray;
+  margin: 5% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* align-items: flex-start; */
+  padding: 1rem;
+  border-radius: 5px;
+  color: white;
+}
+.form_control * {
+  margin: 5px 0px;
+}
+.form_control {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.form_control > input {
+  width: 90%;
+  padding: 5px 10px;
+}
+
+.invalid > input {
+  border: 2px solid red;
+}
+.invalid > label {
+  color: red;
+}
+.btn {
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  background-color: rgb(60, 56, 56);
+  color: aliceblue;
+  border: none;
+  border-radius: 5px;
+  margin-top: 0.7rem;
+}
+.errorMessage {
+  color: red;
+  font-size: 12px;
+}
+.form_control > textarea {
+  width: 90%;
+  height: 10rem;
+  padding: 5px 10px;
+}
