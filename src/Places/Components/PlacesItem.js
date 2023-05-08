@@ -21,7 +21,7 @@ const PlacesItem = (props) => {
     try {
       props.onDelete(placeId);
       await sendRequest(
-        `http://localhost:4000/api/places/${placeId}`,
+        `${process.env.REACT_APP_BACKEND_URL}/places/${placeId}`,
         "DELETE",
         null,
         {
@@ -40,7 +40,7 @@ const PlacesItem = (props) => {
       )}
       <div className="placeItemContainer">
         <div className="imageContainer">
-          <img className="placeImage" src={`http://localhost:4000/${props.imageUrl}`} alt={props.name} />
+          <img className="placeImage" src={`${process.env.REACT_APP_IMAGE_URL}/${props.imageUrl}`} alt={props.name} />
         </div>
         <div className="placeDetails">
           <h1>{props.title}</h1>

@@ -29,7 +29,7 @@ const AddPlace = () => {
       formData.append("userId", ctx.userId);
       formData.append("image", image);
       const res = await sendRequest(
-        "http://localhost:4000/api/places/",
+        `${process.env.REACT_APP_BACKEND_URL}/places/`,
         "POST",
         formData,
         {

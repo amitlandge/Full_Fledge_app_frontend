@@ -34,7 +34,7 @@ const Auth = () => {
           formData.append("password", password);
           formData.append("image", image);
           const res = await sendRequest(
-            "http://localhost:4000/api/user/signup/",
+            `${process.env.REACT_APP_BACKEND_URL}/user/signup/`,
             "POST",
             formData
           );
@@ -49,7 +49,7 @@ const Auth = () => {
       if (emailIsValid && passIsValid) {
         try {
           const res = await sendRequest(
-            "http://localhost:4000/api/user/signin",
+            `${process.env.REACT_APP_BACKEND_URL}/user/signin`,
             "POST",
             JSON.stringify({
               email,

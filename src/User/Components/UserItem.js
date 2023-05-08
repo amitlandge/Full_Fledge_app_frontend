@@ -11,7 +11,7 @@ function UserItem(props) {
             <div className="image">
               <img
                 style={{ width: "100px" }}
-                src={`http://localhost:4000/${props.imageUrl}`}
+                src={`${process.env.REACT_APP_IMAGE_URL}/${props.imageUrl}`}
                 alt={props.name}
                 className="userImage"
               />

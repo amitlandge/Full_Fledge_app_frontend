@@ -8,7 +8,7 @@ function Users() {
   const [loadedData, setLoadedData] = useState([]);
   useEffect(() => {
     const fetchUser = async () => {
-      const resData = await sendRequest("http://localhost:4000/api/user/");
+      const resData = await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/user/`);
       if (resData.response.ok) {
         setLoadedData(resData.responseData);
       }

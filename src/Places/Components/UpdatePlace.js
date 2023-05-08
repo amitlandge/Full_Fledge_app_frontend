@@ -23,7 +23,7 @@ const UpdatePlace = () => {
     if (nameIsValid && desIsValid) {
     }
     const res = await sendRequest(
-      `http://localhost:4000/api/places/${param.placeId}`,
+      `${process.env.REACT_APP_BACKEND_URL}/places/${param.placeId}`,
       "PUT",
       JSON.stringify({
         title,
@@ -43,7 +43,7 @@ const UpdatePlace = () => {
     console.log(param.placeId);
     const fetchData = async () => {
       const res = await sendRequest(
-        `http://localhost:4000/api/places/${param.placeId}/user`,
+        `${process.env.REACT_APP_BACKEND_URL}/places/${param.placeId}/user`,
         "GET",
         null,
         {

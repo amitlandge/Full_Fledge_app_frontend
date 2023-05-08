@@ -13,7 +13,7 @@ const Places = () => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await sendRequest(
-        `http://localhost:4000/api/places/${param.placeId}`
+        `${process.env.REACT_APP_BACKEND_URL}/places/${param.placeId}`
       );
 
       if (res.response.ok) {
